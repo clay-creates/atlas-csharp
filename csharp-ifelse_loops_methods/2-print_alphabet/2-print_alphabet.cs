@@ -9,7 +9,7 @@ namespace _2_print_alphabet
             string inputString = "abcdefghijklmnopqrstuvwxyz";
             foreach (char c in inputString)
             {
-                Console.WriteLine(c);
+                Console.WriteLine($"{c}\n");
             }
         }
     }
