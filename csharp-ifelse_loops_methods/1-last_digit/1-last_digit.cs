@@ -7,6 +7,10 @@ class Program
         Random rndm = new Random();
         int number = rndm.Next(-10000, 10000);
         int lastDigit = Math.Abs(number) % 10;
+        if (number < 0 && lastDigit != 0)
+        {
+            lastDigit = -lastDigit;
+        }
         string condition;
         if (lastDigit > 5)
         {
