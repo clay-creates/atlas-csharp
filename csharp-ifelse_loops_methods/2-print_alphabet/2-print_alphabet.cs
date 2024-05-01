@@ -8,7 +8,7 @@ namespace _2_print_alphabet
         {
             for (char c = 'a'; c <= 'z'; c++)
             {
-                Console.WriteLine($"{c}\n");
+                Console.WriteLine(c);
             }
         }
     }
