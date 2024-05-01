@@ -6,11 +6,7 @@ namespace _2_print_alphabet
     {
         static void Main(string[] args)
         {
-            string inputString = "abcdefghijklmnopqrstuvwxyz";
-            foreach (char c in inputString)
-            {
-                Console.WriteLine($"{c}\n");
-            }
+            for (char c = 'a'; c <= 'z'; Console.WriteLine(c++)) ;
         }
     }
 }
