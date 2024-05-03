@@ -24,8 +24,9 @@ namespace _0_print_array
                 for (int i = 0; i < size; i++)
                 {
                     array[i] = i;
+                    // Console.Write(array[i]);
                 }
-                Console.WriteLine(string.Join(", ", array));
+                Console.WriteLine(string.Join(" ", array));
             }
             return array;
         }
