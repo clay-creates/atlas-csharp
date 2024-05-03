@@ -6,10 +6,9 @@ class Dictionary
 {
     public static string BestScore(Dictionary<string, int> myList)
     {
-        if (myList == null || myList.Count <= 0)
+        if (myList == null || myList.Count == 0)
         {
-            var bestScore = "None";
-            return bestScore;
+            return "None";
         }
         var bestScore = myList.OrderByDescending(pair => pair.Value).First().Key;
         return bestScore;
