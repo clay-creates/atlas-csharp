@@ -11,6 +11,6 @@ class Dictionary
             return "None";
         }
         var bestScore = myList.OrderByDescending(pair => pair.Value).First().Key;
-        return myList;
+        return bestScore;
     }
 }
