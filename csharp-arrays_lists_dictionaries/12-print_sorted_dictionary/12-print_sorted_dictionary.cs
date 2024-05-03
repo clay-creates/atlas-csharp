@@ -6,7 +6,7 @@ class Dictionary
 {
     public static void PrintSorted(Dictionary<string, string> myDict)
     {
-        var sortedKeys = myDict.Keys.OrderBy(sortedKeys => sortedKeys).ToList();
+        var sortedKeys = myDict.Keys.OrderBy(key => key).ToList();
         foreach (var key in sortedKeys)
         {
             Console.WriteLine($"{key}: {myDict[key]}");
