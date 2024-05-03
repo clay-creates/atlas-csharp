@@ -20,7 +20,7 @@ namespace _0_print_array
 
             if (size == 0)
             {
-                Console.Writeline();
+                Console.WriteLine();
             }
             else
             {
