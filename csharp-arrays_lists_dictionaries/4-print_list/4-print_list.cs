@@ -20,7 +20,11 @@ public class List
 
         foreach (int number in numbers)
         {
-            Console.Write(number + " ");
+            Console.Write(number);
+            if (i >= size)
+            {
+                Console.Write(" ");
+            }
         }
         Console.WriteLine();
 
