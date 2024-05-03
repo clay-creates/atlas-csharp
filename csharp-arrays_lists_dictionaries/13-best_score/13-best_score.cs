@@ -8,7 +8,8 @@ class Dictionary
     {
         if (myList == null || myList.Count < 0)
         {
-            return "None";
+            var bestScore = "None";
+            return bestScore;
         }
         var bestScore = myList.OrderByDescending(pair => pair.Value).First().Key;
         return bestScore;
