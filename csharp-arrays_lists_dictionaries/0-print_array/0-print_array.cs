@@ -20,7 +20,7 @@ namespace _0_print_array
             }
             else
             {
-                int[] array = new int[size];
+                array = new int[size];
                 for (int i = 0; i < size; i++)
                 {
                     array[i] = i;
