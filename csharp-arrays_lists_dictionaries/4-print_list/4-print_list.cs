@@ -16,16 +16,13 @@ public class List
         for (int i = 0; i < size; i++)
         {
             numbers.Add(i);
-        }
-
-        foreach (int number in numbers)
-        {
-            Console.Write(number);
-            if (i >= size)
+            Console.Write(i);
+            if (i < size - 1)
             {
-                Console.Write(" ");
+                Console.Write(" ")l
             }
         }
+
         Console.WriteLine();
 
         return numbers;
