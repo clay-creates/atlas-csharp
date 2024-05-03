@@ -18,7 +18,6 @@ public class List
             numbers.Add(i);
         }
 
-        Console.WriteLine("List of integers:");
         foreach (int number in numbers)
         {
             Console.Write(number + " ");
