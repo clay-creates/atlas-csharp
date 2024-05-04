@@ -11,7 +11,7 @@ class List
         {
             if (set1.Contains(element))
             {
-                commons.ADD(element);
+                commons.Add(element);
             }
         }
         for (int i = 0; i < commons.Count - 1; i++)
