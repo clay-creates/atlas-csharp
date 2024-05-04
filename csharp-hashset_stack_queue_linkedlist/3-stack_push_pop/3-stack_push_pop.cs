@@ -24,11 +24,6 @@ class MyStack
             {
                 aStack.Pop();
             }
-
-            if (aStack.Count > 0)
-            {
-                aStack.Pop();
-            }
         }
 
         aStack.Push(newItem);
