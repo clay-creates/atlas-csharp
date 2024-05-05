@@ -22,7 +22,6 @@ class LList
         {
             Console.WriteLine(item);
         }
-        Console.WriteLine();
         return list;
     }
 }
