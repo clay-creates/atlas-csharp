@@ -29,7 +29,6 @@ public class MyQueue
             {
                 aQueue.Dequeue();
             }
-            aQueue.Dequeue();
         }
 
         return aQueue;
