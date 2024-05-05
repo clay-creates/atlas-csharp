@@ -25,7 +25,9 @@ public class MyQueue
 
         if (containsSearch)
         {
-            while (aQueue.Peek() != search)
+            int searchIndex = aQueue.ToList().IndexOf(search);
+
+            for (int i = 0; i <= searchIndex; i++)
             {
                 aQueue.Dequeue();
             }
