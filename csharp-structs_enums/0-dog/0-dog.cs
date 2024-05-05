@@ -5,14 +5,17 @@ namespace _0_dog
 {
     class Program
     {
-        static void Main(string[] args)
-        {
-            enum Rating
+
+        enum Rating
         {
             Good,
             Great,
             Excellent,
         }
+
+        static void Main(string[] args)
+        {
+
+        }
     }
-}
 }
