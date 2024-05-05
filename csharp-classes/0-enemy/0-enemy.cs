@@ -7,6 +7,6 @@ namespace Enemies
     /// </summary>
     public class Zombie
     {
-        /// Zombie things
+
     }
 }
