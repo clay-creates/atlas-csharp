@@ -16,7 +16,7 @@ class Int
         }
         finally
         {
-            Console.WriteLine($"The result of {a} divided by {b} is: {result}");
+            Console.WriteLine($"{a} / {b} = {result}");
         }
     }
 }
