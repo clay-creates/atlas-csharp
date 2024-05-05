@@ -1,21 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace _0_dog
+class Doggo
 {
-    class Program
+
+    enum Rating
+    {
+        Good,
+        Great,
+        Excellent,
+    }
+
+    static void Main(string[] args)
     {
 
-        enum Rating
-        {
-            Good,
-            Great,
-            Excellent,
-        }
-
-        static void Main(string[] args)
-        {
-
-        }
     }
 }
