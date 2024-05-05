@@ -16,13 +16,13 @@ class LList
         }
 
         int index = 0;
-        foreach (int item in myLList)
+        foreach (int value in myLList)
         {
             if (index == n)
             {
-                return item;
+                return value;
             }
-            item++;
+            index++;
         }
         return 0;
     }
