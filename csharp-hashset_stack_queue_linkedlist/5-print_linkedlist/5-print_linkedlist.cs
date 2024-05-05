@@ -17,7 +17,6 @@ class LList
             list.AddLast(i);
         }
 
-        Console.WriteLine("LinkedList:");
         foreach (var item in list)
         {
             Console.WriteLine(item);
