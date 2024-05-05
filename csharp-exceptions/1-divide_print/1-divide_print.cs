@@ -16,6 +16,12 @@ class Int
         }
         finally
         {
+            if (a == 0 || b == 0)
+            {
+                result = 0;
+                Console.WriteLine("Cannot divide by zero");
+                Console.WriteLine($"{a} / {b} = {result}");
+            }
             Console.WriteLine($"{a} / {b} = {result}");
         }
     }
