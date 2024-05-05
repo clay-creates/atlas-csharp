@@ -14,7 +14,7 @@ namespace Enemies
         /// <summary>
         /// Creates name for Zombies.
         /// </summary>
-        private string name = "No name";
+        private string name = "(No name)";
         /// <summary>
         /// Creates new instance of Zombie class.
         /// </summary>
