@@ -53,9 +53,13 @@ namespace Enemies
             return this.health;
         }
 
+        /// <summary>
+        /// Prints zombie name and health
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
-            Console.WriteLine($"Zombie Name: {this.Name} / Total Health: {this.Health}");
+            Console.WriteLine($"Zombie Name: {this.Name} / Total Health: {this.GetHealth()}");
         }
     }
 }
