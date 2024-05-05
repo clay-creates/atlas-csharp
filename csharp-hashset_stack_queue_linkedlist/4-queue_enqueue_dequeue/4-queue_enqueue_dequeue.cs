@@ -1,28 +1,37 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
-class LList
+public class MyQueue
 {
-    public static LinkedList<int> CreatePrint(int size)
+    public static Queue<string> Info(Queue<string> aQueue, string newItem, string search)
     {
-        if (size < 0)
+
+        Console.WriteLine($"Number of items: {aQueue.Count}");
+
+        if (aQueue.Any())
         {
-            return new LinkedList<int>();
+            Console.WriteLine($"First item: {aQueue.Peek()}");
+        }
+        else
+        {
+            Console.WriteLine("Queue is empty");
         }
 
-        LinkedList<int> list = new LinkedList<int>();
+        aQueue.Enqueue(newItem);
 
-        for (int i = 0; i <= size; i++)
+        bool containsSearch = aQueue.Contains(search);
+        Console.WriteLine($"Queue contains {search}: {containsSearch}");
+
+        if (containsSearch)
         {
-            list.AddLast(i);
+            while (aQueue.Peek() != search)
+            {
+                aQueue.Dequeue();
+            }
+            aQueue.Dequeue();
         }
 
-        Console.WriteLine("LinkedList:");
-        foreach (var item in list)
-        {
-            Console.Write(item + " ");
-        }
-        Console.WriteLine();
-        return list;
+        return aQueue;
     }
 }
