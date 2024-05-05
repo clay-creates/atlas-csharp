@@ -4,15 +4,13 @@ using System.Collections.Generic;
 class Doggo
 {
 
-    enum Rating
+    static void Main(string[] args)
+    {
+        enum Rating
     {
         Good,
         Great,
         Excellent,
     }
-
-    static void Main(string[] args)
-    {
-
-    }
+}
 }
