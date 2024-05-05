@@ -12,7 +12,7 @@ class LList
 
         LinkedList<int> list = new LinkedList<int>();
 
-        for (int i = 0; i <= size; i++)
+        for (int i = 0; i < size; i++)
         {
             list.AddLast(i);
         }
@@ -20,7 +20,7 @@ class LList
         Console.WriteLine("LinkedList:");
         foreach (var item in list)
         {
-            Console.Write(item + " ");
+            Console.WriteLine(item);
         }
         Console.WriteLine();
         return list;
