@@ -1,12 +1,61 @@
 ﻿using System;
 
-namespace _5_enemy
+namespace Enemies
 {
-    class Program
+    /// <summary>
+    /// This class represents a zombie enemy.
+    /// </summary>
+    public class Zombie
     {
-        static void Main(string[] args)
+        /// <summary>
+        /// Creates the health field for zombies.
+        /// </summary>
+        private int health;
+        /// <summary>
+        /// Creates name for Zombies.
+        /// </summary>
+        private string name = "(No name)";
+        /// <summary>
+        /// Creates new instance of Zombie class.
+        /// </summary>
+        public Zombie()
         {
-            Console.WriteLine("Hello World!");
+            this.health = 0;
+        }
+        /// <summary>
+        /// Public constructor of Zombie.
+        /// </summary>
+        /// <param name="value"></param>
+        public Zombie(int value)
+        {
+            if (value < 0)
+            {
+                throw new ArgumentException("Health must be greater than or equal to 0");
+            }
+            this.health = value;
+        }
+        /// <summary>
+        /// Gets or sets name of zombie
+        /// </summary>
+        /// <value></value>
+        public string Name
+        {
+            get { return this.name; }
+            set { this.name = value; }
+        }
+
+        /// <summary>
+        /// Returns health of Zombie object
+        /// </summary>
+        /// <returns></returns>
+        public int GetHealth()
+        {
+            return this.health;
+        }
+
+        public override string ToString()
+        {
+            Console.WriteLine($"Zombie Name: {this.Name} / Total Health: {this.Health}");
         }
     }
 }
