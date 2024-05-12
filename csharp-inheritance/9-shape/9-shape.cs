@@ -71,7 +71,7 @@ class Square : Rectangle
             }
         }
     }
-    public override string .ToString()
+    public override string ToString()
     {
         return $"[Square] {size} / {size}";
     }
