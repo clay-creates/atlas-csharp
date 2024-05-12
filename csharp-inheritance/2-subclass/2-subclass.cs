@@ -5,14 +5,9 @@ class Obj
 {
     public static bool IsOnlyASubclass(Type derivedType, Type baseType)
     {
-        if (Type == baseType)
+        if (derivedType.IsSubClassOf(baseType))
         {
-            return false;
-        }
-
-        if (Type == derivedType)
-        {
-            return true;
+            return !baseType.IsAssignableFrom(derivedType);
         }
         else
         {
