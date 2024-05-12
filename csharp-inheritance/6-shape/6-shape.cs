@@ -13,7 +13,7 @@ class Rectangle : Shape
 {
     private int width;
     private int height;
-    public int width
+    public int Width
     {
         get { return width; }
         set
@@ -28,7 +28,7 @@ class Rectangle : Shape
             }
         }
     }
-    public int height
+    public int Height
     {
         get { return height; }
         set
