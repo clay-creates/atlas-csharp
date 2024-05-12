@@ -1,12 +1,17 @@
 ﻿using System;
+using System.Collections.Generic;
 
-namespace _1_instance
+class Obj
 {
-    class Program
+    public static bool IsInstanceOfArray(object obj)
     {
-        static void Main(string[] args)
+        if (obj is Array)
         {
-            Console.WriteLine("Hello World!");
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 }
