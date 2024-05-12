@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 
-public class Animal
+class Shape
 {
-    public class Dog : Animal
+    public virtual int Area()
     {
-        pass;
+        throw new NotImplementedException("Area() is not implemented");
     }
 }
