@@ -3,7 +3,9 @@ using System.Collections.Generic;
 
 public class Animal
 {
-    public class Dog : Animal
-    {
-    }
+
+}
+public class Dog : Animal
+{
+
 }
