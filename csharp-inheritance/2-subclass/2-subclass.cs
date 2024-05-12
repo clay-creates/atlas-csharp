@@ -1,12 +1,22 @@
 ﻿using System;
+using System.Collections.Generic;
 
-namespace _2_subclass
+class Obj
 {
-    class Program
+    public static bool IsOnlyASubclass(Type derivedType, Type baseType)
     {
-        static void Main(string[] args)
+        if (Type == baseType)
         {
-            Console.WriteLine("Hello World!");
+            return false;
+        }
+
+        if (Type == derivedType)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 }
