@@ -68,6 +68,8 @@ class Square : Rectangle
             else
             {
                 size = value;
+                Height = value;
+                Width = value;
             }
         }
     }
