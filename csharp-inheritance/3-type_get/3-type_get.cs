@@ -7,13 +7,13 @@ class Obj
     {
         Type objInfo = myObj.GetType();
 
-        Console.WriteLine($"{objInfo.name} Properties:");
+        Console.WriteLine($"{objInfo.Name} Properties:");
         foreach (PropertyInfo objProp in objInfo.GetProperties())
         {
             Console.WriteLine(objProp.Name);
         }
 
-        Console.WriteLine($"{info.Name} Methods:");
+        Console.WriteLine($"{objInfo.Name} Methods:");
         foreach (MethodInfo objMethod in objInfo.GetMethods())
         {
             Console.WriteLine(objMethod.Name);
