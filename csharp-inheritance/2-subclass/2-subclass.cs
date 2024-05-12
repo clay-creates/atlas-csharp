@@ -7,7 +7,7 @@ class Obj
     {
         if (derivedType.IsSubclassOf(baseType))
         {
-            return !baseType.IsAssignableFrom(derivedType);
+            return!baseType.IsAssignableFrom(derivedType);
         }
         else
         {
