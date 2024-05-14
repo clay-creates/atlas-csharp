@@ -94,7 +94,7 @@ class Decoration : Base, IInteractive, IBreakable
     /// <summary>
     /// Boolean to determine if item is a Quest Item
     /// </summary>
-    public bool isQuestItem { get; set; };
+    public bool isQuestItem { get; set; }
     /// <summary>
     /// Initializes an instance of Decoration
     /// </summary>
