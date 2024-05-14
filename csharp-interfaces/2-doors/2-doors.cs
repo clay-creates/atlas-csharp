@@ -28,7 +28,7 @@ interface ICollectable
 
 class Door : Base, IInteractive
 {
-    public string name
+    public string name(value)
     {
         get { return name; }
         set { name = value; }
