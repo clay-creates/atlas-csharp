@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 
 abstract class Base
 {
-    public abstract string name { get; }
+    public abstract string name == "";
     public override string ToString()
     {
-        return $"{name} is a {this.GetType().name}";
+        return $"{name} is a {this.GetType().Name}";
     }
 }
