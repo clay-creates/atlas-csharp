@@ -1,6 +1,6 @@
 ﻿using System;
 
-abstract class Base
+public abstract class Base
 {
     public string name { get; set; }
     public override string ToString()
