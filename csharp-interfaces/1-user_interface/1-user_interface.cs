@@ -9,24 +9,38 @@ abstract class Base
     }
 }
 
-public interface IInteractive
+interface IInteractive
 {
     void Interact();
 }
 
-public interface IBreakable
+interface IBreakable
 {
-    public int durability;
+    public int durability { get; set; }
     void Break();
 }
 
-public interface ICollectable
+interface ICollectable
 {
-    public bool isCollected;
+    public bool isCollected { get; set; }
     void Collect();
 }
 
 class TestObject : Base : IInteractive: IBreakable: ICollectable
 {
+    int durability { get; set; }
+    bool isCollected { get; set; }
 
+    public void Interact
+{
+
+}
+public void Break()
+{
+
+}
+public void Collect()
+{
+
+}
 }
