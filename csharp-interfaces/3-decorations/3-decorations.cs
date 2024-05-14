@@ -106,7 +106,7 @@ class Decoration : Base, IInteractive, IBreakable
         this.name = name;
         if (durability <= 0)
         {
-            throw new ArgumentException("Durability mus be greater than 0");
+            throw new ArgumentException("Durability must be greater than 0");
         }
     }
     /// <summary>
@@ -116,16 +116,16 @@ class Decoration : Base, IInteractive, IBreakable
     {
         if (durability <= 0)
         {
-            Console.WriteLine($"The {this.name} has been broken.")
+            Console.WriteLine($"The {this.name} has been broken.");
         }
 
         if (isQuestItem == true)
         {
-            Console.WriteLine($"You look at the {this.name}. There's a key inside.")
+            Console.WriteLine($"You look at the {this.name}. There's a key inside.");
         }
         else if (isQuestItem == false)
         {
-            Console.WriteLine($"You looki at the {this.name}. Not much to see here.")
+            Console.WriteLine($"You looki at the {this.name}. Not much to see here.");
         }
     }
     /// <summary>
@@ -136,7 +136,7 @@ class Decoration : Base, IInteractive, IBreakable
         durability--;
         if (durability > 0)
         {
-            Console.WriteLine($"You hit the {this.name}. It cracks.")
+            Console.WriteLine($"You hit the {this.name}. It cracks.");
         }
         if (durability == 0)
         {
@@ -144,7 +144,7 @@ class Decoration : Base, IInteractive, IBreakable
         }
         if (durability < 0)
         {
-            Console.WriteLine($"The {this.name} is already broken.")
+            Console.WriteLine($"The {this.name} is already broken.");
         }
     }
 }
