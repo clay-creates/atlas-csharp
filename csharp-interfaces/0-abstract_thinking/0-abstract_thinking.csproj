@@ -4,6 +4,7 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <RootNamespace>_0_abstract_thinking</RootNamespace>
+    <DocumentationFile>bin\Debug\netcoreapp2.1\0-abstract_thinking.xml</DocumentationFile>
   </PropertyGroup>
 
 </Project>

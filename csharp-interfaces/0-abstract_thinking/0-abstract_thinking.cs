@@ -1,12 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 
-namespace _0_abstract_thinking
+abstract class Base
 {
-    class Program
+    public abstract string name { get; }
+    public override string ToString()
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-        }
+        return $"{name} is a {this.GetType().name}";
     }
 }
