@@ -92,6 +92,10 @@ class Door : Base, IInteractive
 class Decoration : Base, IInteractive, IBreakable
 {
     /// <summary>
+    /// Gets or sets the durability of an item
+    /// </summary>
+    public int durability { get; set; }
+    /// <summary>
     /// Boolean to determine if item is a Quest Item
     /// </summary>
     public bool isQuestItem { get; set; }
@@ -103,13 +107,13 @@ class Decoration : Base, IInteractive, IBreakable
     /// <param name="isQuestItem">Is this item a quest item?</param>
     public Decoration(string name = "Decoration", int durability = 1, bool isQuestItem = false)
     {
-        this.name = name;
-        this.durability = durability;
-        this.isQuestItem = isQuestItem;
         if (durability <= 0)
         {
             throw new ArgumentException("Durability must be greater than 0");
         }
+        this.name = name;
+        this.durability = durability;
+        this.isQuestItem = isQuestItem;
     }
     /// <summary>
     /// Interacts with the decoration / item
