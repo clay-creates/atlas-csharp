@@ -9,18 +9,18 @@ public abstract class Base
     }
 }
 
-interface IInteractive
+public interface IInteractive
 {
     void Interact();
 }
 
-interface IBreakable
+public interface IBreakable
 {
     int durability { get; set; }
     void Break();
 }
 
-interface ICollectable
+public interface ICollectable
 {
     bool isCollected { get; set; }
     void Collect();
@@ -28,10 +28,9 @@ interface ICollectable
 
 class Door : Base, IInteractive
 {
-    public string name(value)
+    public Door(string name = "Door")
     {
-        get { return name; }
-        set { name = value; }
+        this.name = name;
     }
     public void Interact()
     {
