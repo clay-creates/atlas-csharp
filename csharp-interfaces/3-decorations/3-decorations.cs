@@ -94,7 +94,7 @@ class Decoration : Base, IInteractive, IBreakable
     /// <summary>
     /// Boolean to determine if item is a Quest Item
     /// </summary>
-    public bool isQuestItem;
+    public bool isQuestItem { get; set; };
     /// <summary>
     /// Initializes an instance of Decoration
     /// </summary>
@@ -104,6 +104,8 @@ class Decoration : Base, IInteractive, IBreakable
     public Decoration(string name = "Decoration", int durability = 1, bool isQuestItem = false)
     {
         this.name = name;
+        this.durability = durability;
+        this.isQuestItem = isQuestItem;
         if (durability <= 0)
         {
             throw new ArgumentException("Durability must be greater than 0");
