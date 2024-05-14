@@ -1,12 +1,40 @@
 ﻿using System;
 
-namespace _2_doors
+abstract class Base
 {
-    class Program
+    public string name { get; set; }
+    public override string ToString()
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-        }
+        return $"{name} is a {this.GetType().Name}";
+    }
+}
+
+interface IInteractive
+{
+    void Interact();
+}
+
+interface IBreakable
+{
+    int durability { get; set; }
+    void Break();
+}
+
+interface ICollectable
+{
+    bool isCollected { get; set; }
+    void Collect();
+}
+
+class Door : Base, IInteractive
+{
+    public string name
+    {
+        get { return name; }
+        set { name = value; }
+    }
+    void Interact()
+    {
+        Console.WriteLine($"You try to open the {this.name}. It's locked.");
     }
 }
