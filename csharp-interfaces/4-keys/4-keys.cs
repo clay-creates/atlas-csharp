@@ -153,6 +153,9 @@ class Decoration : Base, IInteractive, IBreakable
         }
     }
 }
+/// <summary>
+/// Creates a collectable called Key
+/// </summary>
 
 class Key : Base, ICollectable
 {
@@ -162,6 +165,9 @@ class Key : Base, ICollectable
         this.name = name;
         this.isCollected = isCollected;
     }
+    /// <summary>
+    /// Collects the key
+    /// </summary>
     public void Collect()
     {
         if (!isCollected)
