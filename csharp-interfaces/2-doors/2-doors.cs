@@ -5,7 +5,7 @@ abstract class Base
     public string name { get; set; }
     public override string ToString()
     {
-        return $"{name} is a {this.GetType().Name}";
+        return $"{name} is a {this.GetType()}";
     }
 }
 
@@ -33,7 +33,7 @@ class Door : Base, IInteractive
         get { return name; }
         set { name = value; }
     }
-    void Interact()
+    public void Interact()
     {
         Console.WriteLine($"You try to open the {this.name}. It's locked.");
     }
