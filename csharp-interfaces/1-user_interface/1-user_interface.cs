@@ -43,4 +43,12 @@ class TestObject : Base, IInteractive, IBreakable, ICollectable
     {
 
     }
+    public string get_name()
+    {
+        return name;
+    }
+    public void set_name(string name)
+    {
+        this.name = name;
+    }
 }
