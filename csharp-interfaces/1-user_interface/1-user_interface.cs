@@ -2,11 +2,11 @@
 
 abstract class Base
 {
-    public string name = "";
-    public override string ToString()
-    {
-        return $"{name} is a {this.GetType().Name}";
-    }
+    public string name = { get; set;}
+public override string ToString()
+{
+    return $"{name} is a {this.GetType().Name}";
+}
 }
 
 interface IInteractive
@@ -42,13 +42,5 @@ class TestObject : Base, IInteractive, IBreakable, ICollectable
     public void Collect()
     {
 
-    }
-    public string get_name()
-    {
-        return name;
-    }
-    public void set_name(string value)
-    {
-        name = value;
     }
 }
