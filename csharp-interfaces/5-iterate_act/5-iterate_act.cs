@@ -195,9 +195,9 @@ class RoomObjects
     /// <param name="type"></param>
     public static void IterateAction(List<Base> roomObjects, Type type)
     {
-        foreach (var obj in roomObjects)
+        foreach (Base obj in roomObjects)
         {
-            if (obj.GetType().GetInterfaces.Contains(type))
+            if (type.IsInstanceOfType(obj))
             {
                 if (type == typeof(IInteractive))
                 {
