@@ -7,7 +7,6 @@ namespace MyMath.Tests
     public class Tests
     {
         private int[,] matrix;
-        public int successCount = 0;
         /// <summary>
         /// Testing division of matrix with positive integers
         /// </summary>
@@ -21,7 +20,6 @@ namespace MyMath.Tests
             var result = Matrix.Divide(matrix, num);
 
             Assert.AreEqual(expected, result);
-            successCount++;
         }
 
         /// <summary>
@@ -36,7 +34,6 @@ namespace MyMath.Tests
             var result = Matrix.Divide(matrix, num);
 
             Assert.IsNull(result);
-            successCount++;
         }
 
         /// <summary>
@@ -49,7 +46,6 @@ namespace MyMath.Tests
             var result = Matrix.Divide(null, num);
 
             Assert.IsNull(result);
-            successCount++;
         }
 
         /// <summary>
@@ -64,16 +60,6 @@ namespace MyMath.Tests
             var result = Matrix.Divide(matrix, num);
 
             Assert.IsNull(result);
-            successCount++;
-        }
-
-        [Test]
-        public void TestsSuccessful()
-        {
-            if successCount == 4
-            {
-                Console.WriteLine("Test Run Successful.");
-            }
         }
     }
 }
