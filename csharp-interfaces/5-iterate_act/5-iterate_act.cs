@@ -197,7 +197,7 @@ class RoomObjects
     {
         foreach (var obj in roomObjects)
         {
-            if (obj.GetType().Contains(type))
+            if (obj.GetType().GetInterfaces.Contains(type))
             {
                 if (type == typeof(IInteractive))
                 {
