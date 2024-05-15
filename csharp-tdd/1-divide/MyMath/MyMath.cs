@@ -1,9 +1,21 @@
 ﻿using System;
 
+/// <summary>
+/// Sets up MyMath space
+/// </summary>
 namespace MyMath
 {
+    /// <summary>
+    /// Sets up Matrix class 
+    /// </summary>
     public class Matrix
     {
+        /// <summary>
+        /// Divides a matix of ints by the number passed
+        /// </summary>
+        /// <param name="matrix"></param>
+        /// <param name="num"></param>
+        /// <returns></returns>
         public static int[,] Divide(int[,] matrix, int num)
         {
             if (matrix == null)
