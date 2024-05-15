@@ -4,6 +4,7 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <RootNamespace>_5_iterate_act</RootNamespace>
+    <DocumentationFile>bin\Debug\netcoreapp2.1\5-iterate_act.xml</DocumentationFile>
   </PropertyGroup>
 
 </Project>
