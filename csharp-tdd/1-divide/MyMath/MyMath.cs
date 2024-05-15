@@ -1,8 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
 
-/// <summary>
-/// Sets up MyMath space
-/// </summary>
 namespace MyMath
 {
     /// <summary>
@@ -43,7 +41,7 @@ namespace MyMath
                     }
                     catch (DivideByZeroException)
                     {
-                        Console.WriteLine("Cannot divide by zero")
+                        Console.WriteLine("Cannot divide by zero");
                         return null;
                     }
                 }

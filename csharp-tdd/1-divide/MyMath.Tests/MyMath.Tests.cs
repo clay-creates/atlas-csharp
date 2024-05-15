@@ -6,22 +6,18 @@ namespace MyMath.Tests
 {
     public class Tests
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
+        private int[,] matrix;
         /// <summary>
         /// Testing division of matrix with positive integers
         /// </summary>
         [Test]
         public void DividePositive_ReturnCorrect()
         {
-            int[,] matrix = new int[,] { { 4, 8 }, { 16, 32 } };
+            matrix = new int[,] { { 4, 8 }, { 16, 32 } };
             int num = 2;
             int[,] expected = new int[,] { { 2, 4 }, { 8, 16 } };
 
-            var result = matrix.Divide(matrix, num);
+            var result = Matrix.Divide(matrix, num);
 
             Assert.AreEqual(expected, result);
         }
@@ -32,10 +28,10 @@ namespace MyMath.Tests
         [Test]
         public void DivideByZero_ReturnNull()
         {
-            int[,] matrix = new int[,] { { 4, 8 }, { 16, 32 } };
+            matrix = new int[,] { { 4, 8 }, { 16, 32 } };
             int num = 2;
 
-            var result = matrix.Divide(matrix, num);
+            var result = Matrix.Divide(matrix, num);
 
             Assert.IsNull(result);
         }
@@ -47,9 +43,9 @@ namespace MyMath.Tests
         public void NullMatrix_ReturnNull()
         {
             int num = 2;
-            var result = matrix.Divide(null, num);
+            var result = Matrix.Divide(null, num);
 
-            Assert.IsNull(result)
+            Assert.IsNull(result);
         }
 
         /// <summary>
@@ -58,10 +54,10 @@ namespace MyMath.Tests
         [Test]
         public void NaN_Matrix_ReturnNull()
         {
-            int[,] matrix = new int[,] { { "a", "b" }, { "c", "d" } };
+            matrix = new int[,] { { 0, 0 }, { 0, 0 } };
             int num = 2;
 
-            var result = matrix.Divide(matrix, num);
+            var result = Matrix.Divide(matrix, num);
 
             Assert.IsNull(result);
         }
