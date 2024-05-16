@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using System.Collections.Generic;
 using MyMath;
 
 namespace MyMath.Tests
@@ -6,12 +7,12 @@ namespace MyMath.Tests
     public class Tests
     {
 
-        private int[] testList;
+        private List<int> testList;
 
         [SetUp]
         public void SetUp()
         {
-            testList = new int[] { };
+            testList = new List<int>();
         }
 
         /// <summary>
@@ -29,7 +30,7 @@ namespace MyMath.Tests
         [Test]
         public void SingleIntList()
         {
-            testList = new int[] { 5 };
+            testList.Add(5);
             Assert.AreEqual(5, Operations.Max(testList));
         }
 
@@ -39,7 +40,7 @@ namespace MyMath.Tests
         [Test]
         public void MaxEnd()
         {
-            testList = new int[] { 1, 2, 3, 4 };
+            testList.AddRange(new int[] { 1, 2, 3, 4 });
             Assert.AreEqual(4, Operations.Max(testList));
         }
 
@@ -49,7 +50,7 @@ namespace MyMath.Tests
         [Test]
         public void MaxStart()
         {
-            testList = new int[] { 4, 3, 2, 1 };
+            testList.AddRange(new int[] { 4, 3, 2, 1 });
             Assert.AreEqual(4, Operations.Max(testList));
         }
 
@@ -59,7 +60,7 @@ namespace MyMath.Tests
         [Test]
         public void MaxMid()
         {
-            testList = new int[] { 1, 2, 5, 3, 4 };
+            testList.AddRange(new int[] { 1, 2, 5, 3, 4 });
             Assert.AreEqual(5, Operations.Max(testList));
         }
 
@@ -69,7 +70,7 @@ namespace MyMath.Tests
         [Test]
         public void withNegative()
         {
-            testList = new int[] { 1, 2, 3, 4, -5 };
+            testList.AddRange(new int[] { 1, 2, 3, 4, -5 });
             Assert.AreEqual(4, Operations.Max(testList));
         }
     }
