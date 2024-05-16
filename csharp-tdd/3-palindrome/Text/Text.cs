@@ -25,7 +25,7 @@ namespace Text
             string reverse = "";
             foreach (char c in s)
             {
-                reverse = char + reverse;
+                reverse = c + reverse;
             }
 
             return reverse == s;
