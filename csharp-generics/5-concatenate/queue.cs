@@ -2,11 +2,11 @@
 
 namespace _5_concatenate
 {
-    class Program
+    class Queue<T>
     {
-        static void Main(string[] args)
+        static void CheckType()
         {
-            Console.WriteLine("Hello World!");
+            return
         }
     }
 }
