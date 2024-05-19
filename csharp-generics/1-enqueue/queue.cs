@@ -68,6 +68,7 @@ public class Queue<T>
     public void Enqueue(T item)
     {
         Node NewNode = new Node(item);
+        count++;
         if (tail == null)
         {
             head = NewNode;
@@ -77,7 +78,6 @@ public class Queue<T>
         {
             tail.Next = NewNode;
             tail = NewNode;
-            count++;
         }
     }
 
