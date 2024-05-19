@@ -4,7 +4,7 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <RootNamespace>_0_queue</RootNamespace>
-    <DocumentationFile>bin\Debug\netcoreapp2.1\queue.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\netcoreapp2.1\0-queue.xml</DocumentationFile>
   </PropertyGroup>
 
 </Project>
