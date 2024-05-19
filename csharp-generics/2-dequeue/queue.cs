@@ -90,7 +90,6 @@ public class Queue<T>
         if (head == null)
         {
             throw new InvalidOperationException("Queue is empty");
-            return default(T);
         }
         T value = head.Value;
         head = head.Next;
