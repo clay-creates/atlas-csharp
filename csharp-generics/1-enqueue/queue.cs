@@ -24,8 +24,18 @@ public class Queue<T>
 
     public class Node
     {
-        public T Value;
-        public Node Next;
+        /// <summary>
+        /// Gets or sets the value of the current node
+        /// </summary>
+        public T Value { get; set; }
+        /// <summary>
+        /// Gets the next node in the queue
+        /// </summary>
+        public Node Next { get; set; }
+        /// <summary>
+        /// Initializes a new instance of Node class
+        /// </summary>
+        /// <param name="value"></param>
         public Node(T value)
         {
             Value = value;
