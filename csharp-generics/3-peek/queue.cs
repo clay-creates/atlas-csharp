@@ -109,7 +109,7 @@ public class Queue<T>
     {
         if (head == null)
         {
-            throw new InvalidOperationException("Queue is empty");
+            return ("Queue is empty");
         }
         return head.Value;
     }
