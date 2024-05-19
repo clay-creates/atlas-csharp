@@ -109,7 +109,7 @@ public class Queue<T>
     {
         if (head == null)
         {
-            return ("Queue is empty");
+            return default(T);
         }
         return head.Value;
     }
