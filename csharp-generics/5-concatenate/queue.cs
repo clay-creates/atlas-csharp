@@ -151,6 +151,10 @@ public class Queue<T>
         }
     }
 
+    /// <summary>
+    /// Concatenates the queue values to a string to output
+    /// </summary>
+    /// <returns></returns>
     public string Concatenate()
     {
         if (IsEmpty())
