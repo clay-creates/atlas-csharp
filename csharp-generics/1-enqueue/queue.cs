@@ -14,6 +14,9 @@ public class Queue<T>
     /// The tail node of our queue
     /// </summary>
     private Node tail;
+    /// <summary>
+    /// Count of nodes in queue
+    /// </summary>
     public int count = 0;
     /// <summary>
     /// A node in our queue
@@ -104,7 +107,10 @@ public class Queue<T>
     {
         return head == null;
     }
-
+    /// <summary>
+    /// Returns the number of nodes in queue
+    /// </summary>
+    /// <returns></returns>
     public int Count()
     {
         return count;
