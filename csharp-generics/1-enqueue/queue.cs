@@ -14,11 +14,12 @@ public class Queue<T>
     /// The tail node of our queue
     /// </summary>
     private Node tail;
+    public int count = 0;
     /// <summary>
     /// A node in our queue
     /// </summary>
 
-    private class Node
+    public class Node
     {
         public T Value;
         public Node Next;
@@ -63,6 +64,7 @@ public class Queue<T>
         {
             tail.Next = NewNode;
             tail = NewNode;
+            count++;
         }
     }
 
@@ -101,5 +103,10 @@ public class Queue<T>
     public bool IsEmpty()
     {
         return head == null;
+    }
+
+    public int Count()
+    {
+        return count;
     }
 }
