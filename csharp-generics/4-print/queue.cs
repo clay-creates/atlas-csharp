@@ -135,15 +135,18 @@ public class Queue<T>
     /// Method to print each item in queue
     /// </summary>
     /// <value></value>
-    public T Print
+    public void Print()
     {
-        if (head == null)
+        if (IsEmpty())
         {
             System.Console.WriteLine("Queue is empty");
         }
-foreach (T item in Queue)
-{
-    Console.Write(item);
-}
+
+        Node current = head;
+        while (current != null)
+        {
+            Console.WriteLine(current.Value);
+            current = current.Next;
+        }
     }
 }
