@@ -97,6 +97,7 @@ public class Queue<T>
         {
             tail = null;
         }
+        count--;
         return value;
     }
 
