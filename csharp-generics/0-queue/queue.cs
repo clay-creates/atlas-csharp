@@ -62,7 +62,7 @@ public class Queue<T>
         else
         {
             tail.Next = NewNode;
-            tail = NewNode
+            tail = NewNode;
         }
     }
 
