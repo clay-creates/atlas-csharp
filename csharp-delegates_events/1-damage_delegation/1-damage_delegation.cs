@@ -47,8 +47,16 @@ public class Player
         System.Console.WriteLine($"{name} has {hp} / {maxHp} health");
     }
 
+    /// <summary>
+    /// Delegate blueprint for methods that calculate health
+    /// </summary>
+    /// <param name="amount">a float amount to be used for damage or healing</param>
     public delegate void CalculateHealth(float amount);
 
+    /// <summary>
+    /// Method for calculating damage amounts
+    /// </summary>
+    /// <param name="damage">float amount of damage to player</param>
     public void TakeDamage(float damage)
     {
         System.Console.WriteLine($"{name} takes {damage} damage!");
@@ -59,6 +67,10 @@ public class Player
         }
     }
 
+    /// <summary>
+    /// Method for calculating healing amounts
+    /// </summary>
+    /// <param name="heal">float amount of healing to player</param>
     public void HealDamage(float heal)
     {
         System.Console.WriteLine($"{name} heals {heal} HP!");
