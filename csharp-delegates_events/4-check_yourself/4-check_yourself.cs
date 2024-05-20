@@ -21,7 +21,14 @@ public class Player
     /// <value>float current hp value</value>
     private float hp { get; set; }
 
+    /// <summary>
+    /// Represents the status of the player
+    /// </summary>
+    /// <value></value>
     private string status { get; set; }
+    /// <summary>
+    /// Event Handler to check player HP
+    /// </summary>
     public event EventHandler<CurrentHPArgs> HPCheck;
 
     /// <summary>
@@ -142,6 +149,11 @@ public class Player
         return returnVal;
     }
 
+    /// <summary>
+    /// Checks current health values, compares them to maxHP and changes player status accordingly
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private void CheckStatus(object sender, CurrentHPArgs e)
     {
         float currentHp = e.currentHp;
@@ -190,6 +202,9 @@ public enum Modifier
 /// <returns></returns>
 public delegate float CalculateModifier(float baseValue, Modifier modifier);
 
+/// <summary>
+/// Defines args for working with Current player hp
+/// </summary>
 public class CurrentHPArgs : EventArgs
 {
     public float currentHp { get; }
