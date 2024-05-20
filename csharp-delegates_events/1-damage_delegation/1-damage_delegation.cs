@@ -52,17 +52,17 @@ public class Player
     public void TakeDamage(float damage)
     {
         System.Console.WriteLine($"{name} takes {damage} damage!");
-        Player.hp -= damage;
+        this.hp -= damage;
         if (damage <= 0)
         {
             System.Console.WriteLine($"{name} takes 0 damage!");
         }
     }
 
-    public HealDamage(float heal)
+    public void HealDamage(float heal)
     {
         System.Console.WriteLine($"{name} heals {heal} HP!");
-        Player.hp += heal;
+        this.hp += heal;
         if (heal <= 0)
         {
             System.Console.WriteLine($"{name} heals 0 HP!");
