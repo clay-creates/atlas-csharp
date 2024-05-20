@@ -65,10 +65,9 @@ public class Player
         }
         else
         {
-            float newHp = this.hp - damage;
             System.Console.WriteLine($"{name} takes {damage} damage!");
         }
-        ValidateHP(newHp);
+        ValidateHP(this.hp - damage);
 
     }
 
@@ -84,10 +83,9 @@ public class Player
         }
         else
         {
-            float newHp = this.hp + heal;
             System.Console.WriteLine($"{name} heals {heal} HP!");
         }
-        ValidateHP(newHp);
+        ValidateHP(this.hp + heal);
     }
 
     public void ValidateHP(float newHp)
