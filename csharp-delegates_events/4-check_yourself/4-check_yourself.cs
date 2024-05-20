@@ -122,7 +122,7 @@ public class Player
             this.hp = newHp;
         }
 
-        CheckStatus(null, new CurrentHPArgs(hp));
+        HPCheck?.Invoke(this, new CurrentHPArgs(hp));
     }
 
     /// <summary>
