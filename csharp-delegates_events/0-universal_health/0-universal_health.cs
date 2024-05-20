@@ -38,10 +38,9 @@ public class Player
 
         this.maxHp = maxHp;
         this.hp = maxHp;
-
-        public void PrintHealth()
-        {
-            System.Console.WriteLine($"{name} has {hp} / {maxHp} health");
-        }
+    }
+    public void PrintHealth()
+    {
+        System.Console.WriteLine($"{name} has {hp} / {maxHp} health");
     }
 }
