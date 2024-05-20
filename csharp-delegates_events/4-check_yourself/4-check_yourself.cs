@@ -207,8 +207,16 @@ public delegate float CalculateModifier(float baseValue, Modifier modifier);
 /// </summary>
 public class CurrentHPArgs : EventArgs
 {
+    /// <summary>
+    /// Gets the players current hp
+    /// </summary>
+    /// <value></value>
     public float currentHp { get; }
 
+    /// <summary>
+    /// Builder / Instance of CurrentHPArgs for current hp calcs
+    /// </summary>
+    /// <param name="newHp"></param>
     public CurrentHPArgs(float newHp)
     {
         this.currentHp = newHp;
