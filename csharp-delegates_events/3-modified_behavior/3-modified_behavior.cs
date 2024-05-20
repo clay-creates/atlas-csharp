@@ -109,6 +109,28 @@ public class Player
             this.hp = newHp;
         }
     }
+
+    /// <summary>
+    /// Method to apply calulations to base by modifier from enum
+    /// </summary>
+    /// <param name="baseValue">value to calculate</param>
+    /// <param name="modifier">what to calculate by</param>
+    /// <returns></returns>
+    public float ApplyModifier(float baseValue, Modifier modifier)
+    {
+        if (modifier == Modifier.Weak)
+        {
+            return (baseValue / 2);
+        }
+        else if (modifier == Modifier.Strong)
+        {
+            return (baseValue * 1.5);
+        }
+        else
+        {
+            return (baseValue);
+        }
+    }
 }
 
 /// <summary>
@@ -129,24 +151,3 @@ public enum Modifier
 /// <returns></returns>
 public delegate float CalculateModifier(float baseValue, Modifier modifier);
 
-/// <summary>
-/// Method to apply calulations to base by modifier from enum
-/// </summary>
-/// <param name="baseValue">value to calculate</param>
-/// <param name="modifier">what to calculate by</param>
-/// <returns></returns>
-public float ApplyModifier(float baseValue, Modifier modifier)
-{
-    if (modifier == Modifier.Weak)
-    {
-        return (baseValue / 2);
-    }
-    else if (modifier == Modifier.Strong)
-    {
-        return (baseValue * 1.5);
-    }
-    else
-    {
-        return (baseValue);
-    }
-}
