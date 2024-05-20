@@ -63,8 +63,12 @@ public class Player
         {
             System.Console.WriteLine($"{name} takes 0 damage!");
         }
-        this.hp -= damage;
-        System.Console.WriteLine($"{name} takes {damage} damage!");
+        else
+        {
+            this.hp -= damage;
+            System.Console.WriteLine($"{name} takes {damage} damage!");
+        }
+
     }
 
     /// <summary>
@@ -77,7 +81,10 @@ public class Player
         {
             System.Console.WriteLine($"{name} heals 0 HP!");
         }
-        this.hp += heal;
-        System.Console.WriteLine($"{name} heals {heal} HP!");
+        else
+        {
+            this.hp += heal;
+            System.Console.WriteLine($"{name} heals {heal} HP!");
+        }
     }
 }
