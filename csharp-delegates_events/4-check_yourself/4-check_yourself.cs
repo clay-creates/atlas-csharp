@@ -169,7 +169,7 @@ public class Player
         {
             status = $"{name} isn't doing too great...";
         }
-        else if (currentHp < 0 && currentHp >= maxHp / 4)
+        else if (currentHp > 0 && currentHp <= maxHp / 4)
         {
             status = $"{name} needs help!";
         }
