@@ -21,8 +21,8 @@ public class Player
     /// <value>float current hp value</value>
     private float hp { get; set; }
 
-    private string status { get; set; } = $"{name} is ready to go!";
-    public event EventHandler<CurrentHPArgs> HpCheck;
+    private string status { get; set; }
+    public event EventHandler<CurrentHPArgs> HPCheck;
 
     /// <summary>
     /// player constructor creates instance of player class
@@ -41,6 +41,7 @@ public class Player
 
         this.maxHp = maxHp;
         this.hp = maxHp;
+        status = $"{name} is ready to go!";
 
         HPCheck += CheckStatus;
     }
@@ -114,7 +115,7 @@ public class Player
             this.hp = newHp;
         }
 
-        HpCheck(hp);
+        HPCheck?.Invoke(this, new CurrentHPArgs(hp));
     }
 
     /// <summary>
