@@ -39,6 +39,9 @@ public class Player
         this.maxHp = maxHp;
         this.hp = maxHp;
     }
+    /// <summary>
+    /// prints the players current health
+    /// </summary>
     public void PrintHealth()
     {
         System.Console.WriteLine($"{name} has {hp} / {maxHp} health");
