@@ -59,12 +59,12 @@ public class Player
     /// <param name="damage">float amount of damage to player</param>
     public void TakeDamage(float damage)
     {
-        System.Console.WriteLine($"{name} takes {damage} damage!");
-        this.hp -= damage;
         if (damage <= 0)
         {
             System.Console.WriteLine($"{name} takes 0 damage!");
         }
+        this.hp -= damage;
+        System.Console.WriteLine($"{name} takes {damage} damage!");
     }
 
     /// <summary>
@@ -73,11 +73,11 @@ public class Player
     /// <param name="heal">float amount of healing to player</param>
     public void HealDamage(float heal)
     {
-        System.Console.WriteLine($"{name} heals {heal} HP!");
-        this.hp += heal;
         if (heal <= 0)
         {
             System.Console.WriteLine($"{name} heals 0 HP!");
         }
+        this.hp += heal;
+        System.Console.WriteLine($"{name} heals {heal} HP!");
     }
 }
