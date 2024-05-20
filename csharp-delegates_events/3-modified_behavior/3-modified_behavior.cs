@@ -118,15 +118,20 @@ public class Player
     /// <returns></returns>
     public float ApplyModifier(float baseValue, Modifier modifier)
     {
+        float returnVal = baseValue;
         switch (modifier)
         {
             case Modifier.Weak:
-                return baseValue / 2;
+                returnVal = baseValue * 0.5f;
+                break;
             case Modifier.Strong:
-                return baseValue * 1.5f;
+                returnVal = baseValue * 1.5f;
+                break;
             case Modifier.Base:
-                return baseValue;
+                returnVal = baseValue * 1f;
+                break;
         }
+        return returnVal;
     }
 }
 
@@ -147,4 +152,3 @@ public enum Modifier
 /// <param name="modifier">modifier from enum to use in calculation</param>
 /// <returns></returns>
 public delegate float CalculateModifier(float baseValue, Modifier modifier);
-
