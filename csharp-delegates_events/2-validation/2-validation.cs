@@ -88,6 +88,10 @@ public class Player
         ValidateHP(this.hp + heal);
     }
 
+    /// <summary>
+    /// Validates the calculated health changes from taking dmg or getting healed
+    /// </summary>
+    /// <param name="newHp">var to update player hp</param>
     public void ValidateHP(float newHp)
     {
         if (newHp <= 0)
