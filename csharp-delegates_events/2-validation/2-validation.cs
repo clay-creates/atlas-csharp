@@ -62,6 +62,7 @@ public class Player
         if (damage <= 0)
         {
             System.Console.WriteLine($"{name} takes 0 damage!");
+            return;
         }
         else
         {
@@ -80,6 +81,7 @@ public class Player
         if (heal <= 0)
         {
             System.Console.WriteLine($"{name} heals 0 HP!");
+            return;
         }
         else
         {
@@ -94,7 +96,7 @@ public class Player
     /// <param name="newHp">var to update player hp</param>
     public void ValidateHP(float newHp)
     {
-        if (newHp <= 0)
+        if (newHp < 0)
         {
             this.hp = 0;
         }
