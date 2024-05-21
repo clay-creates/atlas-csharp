@@ -18,7 +18,7 @@ class MatrixMath
         }
         else
         {
-            return new double[] { { -1 } };
+            return new double[,] { { -1 } };
         }
     }
 }
