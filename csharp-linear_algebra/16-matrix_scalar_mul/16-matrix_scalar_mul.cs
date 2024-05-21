@@ -11,14 +11,14 @@ class MatrixMath
             {
                 for (int j = 0; j < matrix.GetLength(1); j++)
                 {
-                    result[i, j] += matrix[i, j] * scalar;
+                    result[i, j] = matrix[i, j] * scalar;
                 }
             }
             return result;
         }
         else
         {
-            return new double[-1, -1];
+            return new double[] { { -1 } };
         }
     }
 }
