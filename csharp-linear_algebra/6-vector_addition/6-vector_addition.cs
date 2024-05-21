@@ -2,7 +2,7 @@
 
 class VectorMath
 {
-    public static double[] Add(double[] vector1, double[] vector 2)
+    public static double[] Add(double[] vector1, double[] vector2)
     {
         if (vector1.Length == 2 && vector2.Length == 2)
         {
