@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Math;
 
 namespace _3_magnitude
 {
