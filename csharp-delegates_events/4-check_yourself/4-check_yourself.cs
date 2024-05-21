@@ -157,23 +157,23 @@ public class Player
     private void CheckStatus(object sender, CurrentHPArgs e)
     {
         float currentHp = e.currentHp;
-        if (currentHp == maxHp)
+        if (e.currentHp == this.maxHp)
         {
             status = $"{name} is in perfect health!";
         }
-        else if (currentHp >= maxHp / 2 && currentHp < maxHp)
+        else if (e.currentHp >= this.maxHp / 2 && e.currentHp < this.maxHp)
         {
             status = $"{name} is doing well!";
         }
-        else if (currentHp >= maxHp / 4 && currentHp < maxHp / 2)
+        else if (e.currentHp >= this.maxHp / 4 && e.currentHp < this.maxHp / 2)
         {
             status = $"{name} isn't doing too great...";
         }
-        else if (currentHp > 0 && currentHp <= maxHp / 4)
+        else if (e.currentHp > 0 && e.currentHp <= this.maxHp / 4)
         {
             status = $"{name} needs help!";
         }
-        else if (currentHp == 0)
+        else if (e.currentHp == 0)
         {
             status = $"{name} is knocked out!";
         }
