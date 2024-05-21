@@ -15,7 +15,6 @@ class VectorMath
             sum += Math.Pow(vector[i], 2);
         }
 
-        double magnitude = Math.Sqrt(sum);
-        return Math.Round(magnitude);
+        return Math.Round(Math.Sqrt(sum), 2);
     }
 }
