@@ -5,25 +5,24 @@ class MatrixMath
     public static double[,] Rotate2D(double[,] matrix, double angle)
     {
 
-        if (matrix == null || matrix.GetLength(0) != matrix.GetLength(1))
+        if (matrix.GetLength(1) > 2)
         {
-            return new double[1, 1] { { -1 } };
+            return new double[,] { { -1 } };
         }
 
-        int n = matrix.GetLength(0);
+        double cos = Math.Cos(angle);
+        double sin = Math.Sin(angle);
 
-        double[,] result = new double[n, n];
+        double[,] result = new double[2, 2];
 
-        for (int i = 0; i < n; i++)
+        for (int x = 0; x < 2; x++)
         {
-            for (int j = 0; j < n; j++)
+            for (int y = 0; y < 2; y++)
             {
-                double newX = matrix[i, j] * Math.Cos(angle) - matrix[j, i] * Math.Sin(angle);
-                double newY = matrix[i, j] * Math.Sin(angle) + matrix[j, i] * Math.Cos(angle);
-
-                result[i, j] = newX;
+                result[x, y] = matrix[x, 0] * cos - matrix[y, 1] * sin;
             }
         }
+
         return result;
     }
 }
