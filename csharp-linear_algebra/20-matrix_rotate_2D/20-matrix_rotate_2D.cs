@@ -2,6 +2,12 @@
 
 class MatrixMath
 {
+    /// <summary>
+    /// I dont understanddd this and numbers make my head hurt...
+    /// </summary>
+    /// <param name="matrix"></param>
+    /// <param name="angle"></param>
+    /// <returns></returns>
     public static double[,] Rotate2D(double[,] matrix, double angle)
     {
 
