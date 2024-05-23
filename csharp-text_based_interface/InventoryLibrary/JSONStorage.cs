@@ -30,6 +30,6 @@ public class JSONStorage
     {
         string filename = "../storage/inventory_manager.json";
         string json = filename.ReadAllText(filename);
-        objects - JsonSerializer.Deserialize<Dictionary<string, object>>(json);
+        objects = JsonSerializer.Deserialize<Dictionary<string, object>>(json);
     }
 }
