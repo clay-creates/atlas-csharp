@@ -26,12 +26,48 @@ class Program
             Console.WriteLine("<Exit>");
 
             string input = Console.ReadLine().ToLowerInvariant();
-            string[] parts = input.Split(' ');
+            string[] tokens = input.Split(' ');
 
-            switch (parts[0])
+            switch (tokens[0])
             {
                 case "classnames":
-                    PrintClassNames(storage.All().Keys.Select)
+                    foreach (var ClassName in storage.objects.Keys)
+                    {
+                        Console.WriteLine(ClassName);
+                    }
+                    break;
+                case 'all':
+                    foreach (var obj in storage.objects.Values)
+                    {
+                        Console.WriteLine(obj.ToString());
+                    }
+                    break;
+                case "create" when tokens.Length == 3:
+                    Type type = type.GetType(tokens[1]);
+                    if (type != null)
+                    {
+                        var newObj = Activator.CreateInstance(type);
+                        storage.New(newObj);
+                        Console.WriteLine($"Objects of type: {type.Name} created.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Invalid ClassName");
+                    }
+                case "show" when tokens.Length == 3:
+                    Type type = type.GetType(tokens[1]);
+                    if (type != null)
+                    {
+
+                    }
+                case "update" when tokens.Length == 3:
+                case "delete" when tokens.Length == 3:
+                case "exit":
+                    exitApp = true;
+                    break;
+                default:
+                    Console.WriteLine($"Invalid Command.");
+                    break;
             }
         }
     }
